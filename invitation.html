@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Space</title>
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url('InvitationBg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; margin: 0; background-color: black;">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const name = localStorage.getItem('user_name');
+            document.getElementById('invNam').textContent = name ? name : 'Guest'; // Handle missing name case
+        });
+    </script>
+    <nav class="d-flex align-items-center justify-content-between">
+        <a href="index.html"><img src="Logo.png" alt="Logo" class="p-4"></a>
+        <img src="Sponser2.png" alt="Sponser2" class="p-4">
+        <img src="Sponser.png" alt="Sponsor" class="p-4">
+    </nav>
+    <div class="d-flex align-items-center justify-content-center">
+        <img src="InvitationFirst.png" alt="">
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div>
+        <p class="fw-bolder text-white d-flex align-items-center justify-content-center ">Join Us at the Happy Space Pop-Up Flea Market!</p>
+        <p class="fs-3 fw-bolder px-3" style="color: #fcff51;">Dear <span id="invNam"></span>,</p>
+        <img src="InvitationSecond.png" class="px-3" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
